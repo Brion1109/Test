@@ -4,6 +4,12 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
+
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Do you know about herbs?' });
+});
+
+
 // GET route to retrieve all registered users
 router.get('/', async (req, res) => {
   try {
@@ -13,5 +19,7 @@ router.get('/', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+
 
 module.exports = router;

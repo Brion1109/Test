@@ -1,5 +1,3 @@
-// backend/server.js
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -13,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/event-registration', {
+mongoose.connect('mongodb+srv://aefkungpy:nQHXpq6hlAdtiiKy@pongsakorntest.5me3pht.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
